@@ -3,12 +3,14 @@ const router = express.Router();
 const Bread = require('../models/bread.js');
 
 
+
 // INDEX
 router.get('/', (req, res) => {
-  res.send(Bread);
+  res.render('index', {
+    breads: Bread
+  })
+// res.send(Bread)
 })
-
-
 
 module.exports = router
 
