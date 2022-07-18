@@ -7,9 +7,9 @@ const Bread = require('../models/bread.js');
 // INDEX
 router.get('/', (req, res) => {
   res.render('index', {
-    breads: Bread
+    breads: Bread,
+    title: "Welcome to BreadCRUD!"
   })
-// res.send(Bread)
 })
 
 module.exports = router
